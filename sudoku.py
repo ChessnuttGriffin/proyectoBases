@@ -1,3 +1,4 @@
+#Importamos los paquetes argparse y tkinter
 import argparse
 
 from tkinter import Tk, Canvas, Frame, Button, BOTH, TOP, BOTTOM
@@ -7,7 +8,7 @@ MARGIN = 20  # Pixels around the board
 SIDE = 50  # Width of every board cell.
 WIDTH = HEIGHT = MARGIN * 2 + SIDE * 9  # Width and height of the whole board
 
-
+#
 class SudokuError(Exception):
     """
     An application specific error.
@@ -133,7 +134,8 @@ class SudokuUI(Frame):
             self.canvas.focus_set()
 
             # get row and col numbers from x,y coordinates
-            row, col = (y - MARGIN) / SIDE, (x - MARGIN) / SIDE
+            row = int((y - MARGIN) / SIDE)
+            col = int ((x - MARGIN) / SIDE)
 
             # if cell was selected already - deselect it
             if (row, col) == (self.row, self.col):
@@ -144,8 +146,8 @@ class SudokuUI(Frame):
             self.row, self.col = -1, -1
 
         self.__draw_cursor()
-
-    def __key_pressed(self, event):
+        
+    def __key_pressed(self, event):  
         if self.game.game_over:
             return
         if self.row >= 0 and self.col >= 0 and event.char in "1234567890":
@@ -161,7 +163,7 @@ class SudokuUI(Frame):
         self.canvas.delete("victory")
         self.__draw_puzzle()
 
-
+#Representa el tablero de Sudoku a resolver
 class SudokuBoard(object):
     """
     Sudoku Board representation
@@ -190,7 +192,7 @@ class SudokuBoard(object):
             raise SudokuError("Each sudoku puzzle must be 9 lines long")
         return board
 
-
+#
 class SudokuGame(object):
     """
     A Sudoku game, in charge of storing the state of the board and checking
