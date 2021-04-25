@@ -30,7 +30,8 @@
 
 ## Analisis de Diseño
 ---
-
+## Base de Datos
+---
 - La base de datos surge de la necesidad de generar el sistema de almacenamiento, para la autenticacion y el retorno de datos de usuario para un juego de Sudoku. Se empezó por crear cada una de las tablas, pero esto sin antes analizar la naturaleza de la aplicación y de sus posibles escenarios, todas la tablas creadas fueron analizadas y pensadas de tal forma, que así se llevarán acabo todas las consultas de las peticiones realizadas por el usuario en la aplicacíon y por su puesto un registro total de todo lo que hagan los usuarios, ademas cumpliendo con los items de la definción del proyecto. 
     
 - La tabla Rol tiene como funcionalidad la identificacion de aquellos usarios considerados como "Administrador", y el usuario normal, estos tienen como valores predefinidos los roles anteriormente mencionados, lo que hace a la tabla una parte fucndamental al momento de su utilizacion, ya que el administrador gestiona la parte de la creacion de nuevos usuarios.
@@ -48,23 +49,13 @@
 - Creamos procedimientos almacenados y triggers esto para poder obtener información de manera dinámica y definiendo eventos automáticos para la inserción de datos.
 
 --------------------------------
-## Forma de Trabajo
-* Se identifica que el proyecto consta de partes fundamentales las cuales definen la forma en la que se comienza a trabajar, las cuales son:
+## Desarrollo de elementos en Python
+Se dio a conocer como parte del proyecto una interfaz de juego de Sudoku, la cual contenia 4 tableros pertenecientes a la documentacion del juego.
+El juego se migro de Python2 a Python3, encontrando como diferencias sentencias como xrange y el llamado de la libreria Tkinter.
 
-    * **Desarrollo en python**
-    * **Desarrollo de las bases de datos** 
+El juego puede ser ejecutado con el comando: 
+> python3 sudoku.py --board [tablero]
 
-    se acordo que ambos integrantes del proyecto tabajarian en ambas partes a la vez que se avanzara en el.
+Dando inicio a la creacion de las ventanas de parte del usuario, se establecio el uso de la libreria tkinter y sus metodos importados. Esta interfaz será modificada de tal manera que se le verán conectadas más interfaces para generar todas las funcionalidades requeridas. Por último el controlador será elaborado con python. En esta parte es donde se llevara a cabo las funcionalidades necesarias, para ejecutar las tareas de creación y manipulación de datos.
 
-    **Planificado:**
-
-    * Inicialmente para la elaboracion del proyecto se cuenta con mas integrantes.
-    * Se divide en parejas para realizar las 2 partes fundamentales encontradas.
-    * La pareja que se encarga del desarrollo en python se dividen el trabajo que tambien constaba de 2 partes que son:
-        * Desarrllo de la parte grafica del proyecto, junto a ventanas emergentes, ventanas de errores y botones.
-        * Desarrollo de la funcionalidas que acompañan la parte grafica y la conexión con la base de datos.
-    * Igualmente la otra pareja se encarga del desarrollo de las bases de datos las cuales son 2 asi que se dividen en 2 partes.
-        * Desarrolo de la Base de Datos principal.
-        * Desarrollo de la Base de Datos de Respaldo.
-
-
+# 
