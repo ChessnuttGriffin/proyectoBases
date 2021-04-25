@@ -1,6 +1,6 @@
 
 # Base de Datos
-=======
+===
 ## Analisis de Diseño
 ---
 
