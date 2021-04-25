@@ -58,4 +58,15 @@ El juego puede ser ejecutado con el comando:
 
 Dando inicio a la creacion de las ventanas de parte del usuario, se establecio el uso de la libreria tkinter y sus metodos importados. Esta interfaz será modificada de tal manera que se le verán conectadas más interfaces para generar todas las funcionalidades requeridas. Por último el controlador será elaborado con python. En esta parte es donde se llevara a cabo las funcionalidades necesarias, para ejecutar las tareas de creación y manipulación de datos.
 
-# 
+# Creacion de GUI
+   - Se crearon varias ventanas para la parte visual del lado del usuario utilizando el metodo TK() como principal herramienta asi como sus otras implementaciones para la creacion de estas mismas, en donde se crearon ventanas para la autenticacion de usuario y el administrador, ventanas que corresponden a la demostracion de los puntajes mas altos siendo visualizada con una tabla, asi como una ventana para la creacion de un nuevo usuario, esta pantalla es exclusiva solo para el uso del administrador.
+ 
+# Autenticacion
+   - Otro elemento a elaborar fue un sistema de autenticado para que los usuarios previamente creados por el administrador puedan acceder a la aplicacion de Sudoku. Creamos metodos con funciones especificas que realizaban tareas de autenticado, donde muchos de pertenecen dentro de las clases donde son llamadas. El metodo Entry de Tkinter se utiliza para la insercion de datos. 
+
+# Gestion de Usuarios
+Ya que existen los usuarios "normales" y los administradores, creamos dos ventanas diferentes para cada tipo de usuario al momento de esta ser autenticada. La ventana de usuario asi como la de administrador contienen las opciones de crear un "Nuevo juego", para dar inicio a una partida con la opcion de escoger el tablero que se desea, "Reanudar juego" que permite continuar un juego en caso de que el usuario haya pausado el mismo y un "Mostrar Puntuaciones" para mostrar las puntuaciones mas altas del jugador. El administrador tiene como exclusividad un boton que permite la creacion, eliminacion y actualizacion de datos de un usario.
+
+# Gestion de juego
+ - El juego se presenta tanto al crear una nueva partida, esta brinda las opciones de boton de retroceso del ultimo valor que se agrego, un boton que permite borrar todas las respuestas que el usuario inserto, otro boton que permite crear una nueva partida pero que al ser presionado esta se dara como derrota por parte del juego, y un contador que nos da la pauta para saber nuestro tiempo desde el comienzo del juego y un boton de pausa tanto para parar el tiempo y a la vez guardar la partida.
+
